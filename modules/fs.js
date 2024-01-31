@@ -3,11 +3,11 @@ const path = require('path')
 
 // Criando uma pasta
 // fs.mkdir(path.join(__dirname, '/teste'), (error) => {
-//  if (error) {
-//   return console.log(`Erro: ${error}`);
-//  }
+//   if (error) {
+//     return console.log(`Erro: ${error}`);
+//   }
 
-//  console.log('Pasta criada com sucesso!!');
+//   console.log('Pasta criada com sucesso!!');
 // })
 
 // Criar um arquivo
@@ -48,34 +48,34 @@ const path = require('path')
 // acontecer se a outra não trouxer o resultado
 
 fs.writeFile(
- path.join(__dirname, '/teste', 'criacao.txt'),
+  path.join(__dirname, '/teste', 'criacao.txt'),
   `É meu amigo,
  isso aqui funciona mesmo!!`, (error) => {
 
- if (error) {
-  return console.log(`Erro: ${error}`);
- }
-
- console.log('Arquivo criado com sucesso!');
-
- fs.appendFile(
-  path.join(__dirname, './teste', 'criacao.txt'),
-  ' Hello World', 
-  (error) => {
-   if (error) {
+  if (error) {
     return console.log(`Erro: ${error}`);
-   }
+  }
 
-   console.log('Deu bom hem');
-  })
+  console.log('Arquivo criado com sucesso!');
 
- fs.readFile(
-  path.join(__dirname, '/teste', 'criacao.txt'), 'utf8',
-  (error, data) => {
-   if (error) {
-    return console.log(`Error: ${error}`);
-   }
+  fs.appendFile(
+    path.join(__dirname, './teste', 'criacao.txt'),
+    ' Hello World',
+    (error) => {
+      if (error) {
+        return console.log(`Erro: ${error}`);
+      }
 
-   console.log(data);
-  }) 
+      console.log('Deu bom hem');
+    })
+
+  fs.readFile(
+    path.join(__dirname, '/teste', 'criacao.txt'), 'utf8',
+    (error, data) => {
+      if (error) {
+        return console.log(`Error: ${error}`);
+      }
+
+      console.log(data);
+    })
 })

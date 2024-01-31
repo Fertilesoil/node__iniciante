@@ -2,15 +2,16 @@
 const dotenv = require('dotenv')
 const connectToDataBase = require('./src/database/conect')
 
-dotenv.config({ encoding: 'latin1' , path: 'C:/Users/user/Desktop/Node Iniciante/.env', debug: true })
-console.log(dotenv.config())
+dotenv.config()
 connectToDataBase()
+
+
 
 // require('./modules/path')
 // require('./modules/fs')
 // require('./modules/http')
 
-// require('./modules/express')
+require('./modules/express')
 
 // const person = new Person('Fefe')
 
