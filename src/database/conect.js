@@ -1,7 +1,7 @@
 ﻿const mongoose = require('mongoose')
-const dotenv = require('dotenv') 
+const { ADM, MONGODB_PASSWORD } = require('../utils/env')
 
-const uri = `mongodb+srv://admin:passaai@nodejsiniciante.qjowcfy.mongodb.net/NodeIniciante?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${process.env.ADM}:${process.env.MONGODB_PASSWORD}@nodejsiniciante.qjowcfy.mongodb.net/NodeIniciante?retryWrites=true&w=majority`
 
 const connectToDataBase = async () => {
  (await mongoose.connect(`${uri}`)) 
